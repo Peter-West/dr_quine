@@ -1,9 +1,12 @@
 var nb = 5;
 function yo() {
 	var fs = require('fs');
-	var strToMatch = 'Sully_';
-	if (process.argv[1].match(strToMatch) !== null)
-		nb = nb - 1;
+	var strToMatch = './Sully_' + nb + '.js';
+	process.stdout.write(strToMatch + '\n');
+	if (fs.existsSync(strToMatch)) {
+			process.stdout.write("yo");
+			nb = nb - 1;
+	}		
 	var data = 'var nb = ' + nb + ';\n' + yo.toString()+"\nyo();\n";
 	var path = 'Sully_' + nb + '.js';
 

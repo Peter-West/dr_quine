@@ -1,4 +1,7 @@
 function yo() {
+	/*
+		Yo
+	*/
 	var fs = require('fs');
 	var data = yo.toString()+"\nyo();\n";
 
